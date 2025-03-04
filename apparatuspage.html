@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apparatus</title>
+    <link rel="stylesheet" href="apparatuspage.css">
+</head>
+<body>
+    <div class="datetime">
+        <div class="datetime-display" id="datetime"></div>
+    </div>
+
+    <div class="backbutton">
+      <button class="datetime-display" id="backbutton" onclick="goToInventory()" >Back</button>
+    </div>
+
+    <div class="apparatus-text">
+        <p>Apparatus</p>
+    </div>
+
+    <div class="apparatus-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+    </div>
+    
+
+    <div class="filterbarcontainer">
+        <div class="filter-item">
+            <label for="glasswares" class="filtertext">Glasswares</label>
+            <input type="checkbox" id="glasswares" name="glasswares">
+        </div>
+        
+        <div class="filter-item">
+            <label for="safety-equipments" class="filtertext">Safety Equipments</label>
+            <input type="checkbox" id="safety-equipments" name="safety-equipments">
+        </div>
+        
+        <div class="filter-item">
+            <label for="containers" class="filtertext">Containers</label>
+            <input type="checkbox" id="containers" name="containers">
+        </div>
+        
+        <div class="filter-item">
+            <label for="other-apparatus" class="filtertext">Other Apparatus</label>
+            <input type="checkbox" id="other-apparatus" name="other-apparatus">
+        </div>
+    </div>
+
+    <div class="grid-container" id="button-container"></div>
+
+    <div class="toBorrow">
+        <button class="datetime-display" id="toBorrow" > Add To Borrow</button>
+
+    </div>
+
+    <div class="scheduled">
+        <button class="datetime-display" id="scheduled" > Scheduled Items</button>
+      
+    </div>
+
+    <!-- Modal Structure -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close-button">&times;</span>
+        <div class="modal-body">
+            <img id="modal-image" src="" alt="Apparatus Image" />
+            <div class="modal-text">
+                <h2 id="modal-title">Item Name</h2>
+                <p id="modal-description">Description will appear here.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button Container -->
+<div id="button-container"></div>
+
+    <script src = "apparatuspage.js"></script>
+
+</body>
+</html>

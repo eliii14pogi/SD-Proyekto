@@ -1,0 +1,110 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+    color: white;
+}
+
+.slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: black; /* Ensures no white gaps */
+}
+
+.slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the full area */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow img.active {
+    opacity: 1;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: -1;
+}
+
+.welcome_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    min-width: 300px;
+    z-index: 1;
+}
+
+.welcome_box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.welcome_box p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.enter_button {
+    padding: 15px 30px;
+    background-color: #16772b;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.enter_button:hover {
+    background: #1ff403;
+    color: white;
+    box-shadow: 0 0 5px #1ff403,
+                0 0 25px #1ff403,
+                0 0 50px #1ff403,
+                0 0 200px #1ff403;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.enter_button:active {
+    animation: clickAnimation 0.3s ease;
+}
+
+@keyframes clickAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+/* Add fullscreen specific styles */
+.fullscreen {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+

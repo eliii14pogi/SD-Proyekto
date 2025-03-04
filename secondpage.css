@@ -1,0 +1,113 @@
+body {
+    margin:250px 500px;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #abc779;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 800px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -200px;
+    padding: 20px;
+
+
+}
+
+.datetime {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#backbutton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#backbutton {
+    cursor: pointer;
+}
+
+#backbutton:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+
+.button {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.button:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+    background-color: #f8f8f8;
+}
+
+.button:active {
+    transform: translateY(0px);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.datetime-display {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    font-weight: bold;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+html, body {
+    width: 100%;
+    height:100%;
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+

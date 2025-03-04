@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Weekly Calendar</title>
+    <link rel="stylesheet" href="calendarpage.css">
+    <script defer src="calendarpage.js"></script>
+</head>
+<body>
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <button onclick="prevWeek()">&#9665; Prev</button>
+            <h2 id="week-title">Week</h2>
+            <button onclick="nextWeek()">Next &#9655;</button>
+        </div>
+        <div class="calendar-grid" id="calendar-grid">
+            <!-- Calendar will be generated dynamically here -->
+        </div>
+    </div>
+    
+    <!-- Modal for Event Creation -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Add Event</h3>
+            <input type="text" id="event-title" placeholder="Event Title">
+            <input type="time" id="event-time">
+            <button onclick="saveEvent()">Save</button>
+        </div>
+    </div>
+</body>
+</html>
