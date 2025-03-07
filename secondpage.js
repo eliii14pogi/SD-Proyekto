@@ -22,6 +22,14 @@ function goFirstPage() {
 function redirectToInventory(){
     window.location.href = 'inventorypage.html';
 }
+
+function redirectToCalendar(){
+    window.location.href = 'calendarpage.html';
+}
+
+function redirectToSafetyGuidelines(){
+    window.location.href = 'sg.html';
+}
 // Update immediately and then every second
 updateDateTime();
 setInterval(updateDateTime, 1000);

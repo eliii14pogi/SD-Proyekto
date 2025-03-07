@@ -3,31 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Weekly Calendar</title>
+    <title>Chemical Inventory System - Calendar</title>
     <link rel="stylesheet" href="calendarpage.css">
-    <script defer src="calendarpage.js"></script>
+    
 </head>
 <body>
-    <div class="calendar-container">
-        <div class="calendar-header">
-            <button onclick="prevWeek()">&#9665; Prev</button>
-            <h2 id="week-title">Week</h2>
-            <button onclick="nextWeek()">Next &#9655;</button>
-        </div>
-        <div class="calendar-grid" id="calendar-grid">
-            <!-- Calendar will be generated dynamically here -->
+    <div class="header">
+        <h1>Laboratory Inventory System</h1>
+        <div class="date-time" id="currentDateTime">Loading date and time...</div>
+    </div>
+    
+    <div class="button-container">
+        <button id="backBtn" onclick="redirectToInventory()">BACK </button>
+        <button id="inventoryBtn">INVENTORY</button>
+    </div>
+    
+    <div id="calendarSection">
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <div class="calendar-year" id="calendarYear">2025</div>
+                <div class="calendar-month" id="calendarMonth">February</div>
+                <div class="calendar-nav">
+                    
+                    <button id="prevMonth">Prev ></button>
+                    <button id="nextMonth">Next ></button>
+                </div>
+            </div>
+            
+            <div class="calendar-days">
+                <div class="day-header sunday">Sunday</div>
+                <div class="day-header weekday">Monday</div>
+                <div class="day-header weekday">Tuesday</div>
+                <div class="day-header weekday">Wednesday</div>
+                <div class="day-header weekday">Thursday</div>
+                <div class="day-header weekday">Friday</div>
+                <div class="day-header saturday">Saturday</div>
+            </div>
+            
+            <div class="calendar-dates" id="calendarDates">
+                <!-- Calendar dates will be dynamically generated here -->
+            </div>
         </div>
     </div>
     
-    <!-- Modal for Event Creation -->
-    <div id="event-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h3>Add Event</h3>
-            <input type="text" id="event-title" placeholder="Event Title">
-            <input type="time" id="event-time">
-            <button onclick="saveEvent()">Save</button>
-        </div>
+    <div class="button-container" style="margin-top: 20px;">
+        <button id="historyBtn">HISTORY</button>
     </div>
+    
+    <script src="calendarpage.js"></script>
+        
+    </script>
 </body>
 </html>

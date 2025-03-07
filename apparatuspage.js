@@ -7,6 +7,8 @@ function updateDateTime() {
     });
     const time = now.toLocaleTimeString('en-US', {
         hour: '2-digit',
+
+        
         minute: '2-digit',
         second: '2-digit'
     });
@@ -29,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Apparatus details (Name, Description, Image)
     const apparatusDetails = {
-        "Beaker": {
-            description: "A beaker is a simple container used for stirring, mixing, and heating liquids.",
-            image: "images/beaker.jpg"
+        "Bunsen Burner Tripod": {
+            description: "Tripod stands are often used in combination with other lab equipment, such as Bunsen burners, hot plates, and wire gauze, to provide a stable platform for heating and mixing experiments. They can also be used to support and stabilize glassware during filtration, distillation, and other chemical processes.",
+            image: "Pictures/Apparatus/bunsenburnertripod.JPG"
         },
         "Flask": {
             description: "A flask is used to contain chemical reactions, solutions, and distillations.",
